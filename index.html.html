@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dwayne Johnson (The Rock) Facts Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f7f7f7;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    #fact-container {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+    }
+    
+    #fact {
+      color: #333;
+      font-size: 18px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dwayne Johnson (The Rock) Facts Game</h1>
+  
+  <button onclick="generateFact()">Tell Me a Fact about The Rock!</button>
+  
+  <div id="fact-container">
+    <p id="fact"></p>
+  </div>
+  
+  <script>
+    const rockFacts = [
+      "Dwayne Johnson played college football at the University of Miami.",
+      "He was a WWE wrestler known as 'The Rock' before pursuing an acting career.",
+      "The Rock has starred in blockbuster movies like 'Jumanji,' 'Fast & Furious' franchise, and 'Moana.'",
+      "He is a 10-time world champion in wrestling.",
+      "Dwayne Johnson's production company is called Seven Bucks Productions.",
+      "He has a daughter named Simone, who is also a professional wrestler.",
+      "Johnson is known for his charity work and contributions to various causes.",
+      "He voices the demigod Maui in the Disney film 'Moana.'",
+      "The Rock is known for his catchphrase 'Can you smell what The Rock is cooking?'",
+      "He is one of the highest-paid actors in Hollywood."
+    ];
+
+    function generateFact() {
+      const factContainer = document.getElementById('fact');
+      const randomFact = rockFacts[Math.floor(Math.random() * rockFacts.length)];
+      factContainer.textContent = randomFact;
+    }
+  </script>
+</body>
+</html>
